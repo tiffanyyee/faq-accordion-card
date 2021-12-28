@@ -1,0 +1,180 @@
+/** BASE STYLES **/
+
+body {
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 12px;
+    color: hsl(237, 12%, 33%);
+    margin: 0;
+}
+  
+h1 {
+    font-weight: 700;
+    text-align: center;
+    padding-top: 10px;
+}
+  
+p {
+    font-weight: 400;
+}
+  
+a, a:link, a:visited {
+    text-decoration: none;
+}
+
+
+/** BODY STYLES **/
+
+.container {
+    background-image: linear-gradient(to bottom, hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 375px;
+}
+
+.card {
+    width: 325px;
+    background-color: #fff;
+    border-radius: 15px;
+    margin: 150px 25px 25px;
+    padding-bottom: 50px;
+}
+
+.image-section {
+    background: url("../images/bg-pattern-mobile.svg") center no-repeat;
+    padding-bottom: 30px;
+}
+
+.main-image-mobile {
+    max-width: 74%;
+    position: relative;
+    margin-left: 13%;
+    margin-top: -34%;
+}
+
+.main-image-desktop {
+    display: none;
+}
+
+.box-image-container {
+    display: none;
+}
+
+.accordion-question {
+    font-family: 'Kumbh Sans', sans-serif;
+    color: hsl(237, 12%, 33%);
+    background-color: #fff;
+    cursor: pointer;
+    padding: 18px;
+    min-width: 300px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+}
+
+.accordion hr {
+    border: 1px solid hsl(240, 5%, 91%);
+    max-width: 90%;
+}
+
+.active, .accordion-question:hover {
+    font-weight: 700;
+}
+
+.panel {
+    padding: 0 18px;
+    background-color: #fff;
+    color: hsl(240, 6%, 50%);
+    display: none;
+    overflow: hidden;
+    max-width: 87%;
+}
+
+.accordion-question:after {
+    content: url('../images/icon-arrow-down.svg');
+    float: right;
+    margin-left: 5px;
+}
+  
+.active:after {
+    content: url('../images/icon-arrow-down.svg');
+    transform: rotate(180deg);
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    padding: 150px 0 5px;
+}
+  
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+
+/** MEDIA QUERIES **/
+
+@media only screen and (min-width: 768px) {
+    .container {
+        min-width: 1440px;
+    }
+
+    .card {
+        width: 940px;
+        position: relative;
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        padding-bottom: 0;
+    }
+
+    .image-section {
+        background: url("../images/bg-pattern-desktop.svg") no-repeat -570px -296px;
+        padding-bottom: 225px;
+        display: flex;
+        flex: 50%;
+        overflow: hidden;
+    }
+
+    .main-image-mobile {
+        display: none;
+    }
+
+    .main-image-desktop {
+        display: block;
+        max-width: 120%;
+        position: relative;
+        top: 70px;
+        left: -77px;
+    }
+
+    .box-image-container {
+        display: block;
+        position: absolute;
+        top: 209px;
+        left: -93px;
+    }
+
+    .text-section {
+        display: flex;
+        flex-direction: column;
+        flex: 50%;
+        padding: 0 50px 0 100px;
+    }
+    
+    .accordion-question {
+        width: 98%;
+    }
+
+    h1 {
+        text-align: left;
+        padding-left: 18px;
+    }
+
+    .attribution {
+        padding-top: 1200px;
+    }
+}
